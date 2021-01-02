@@ -1,25 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import Header from './components/Header';
+import ExperienceSection from './components/ExperienceSection';
+import EducationSection from './components/EducationSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
+import ContactSection from './components/ContactSection.js';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainStyled>
+      <Header />
+      <ExperienceSection />
+      <SkillsSection />
+      <EducationSection />
+      <ProjectsSection />
+      <ContactSection />
+    </MainStyled>
   );
 }
+
+const MainStyled = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', arial;
+`;
 
 export default App;
