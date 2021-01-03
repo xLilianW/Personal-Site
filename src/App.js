@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
+import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import EducationSection from './components/EducationSection';
 import SkillsSection from './components/SkillsSection';
@@ -14,6 +15,7 @@ function App() {
   return (
     <MainStyled>
       <Header />
+      <AboutSection />
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />

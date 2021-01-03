@@ -11,8 +11,9 @@ import Slide from '@material-ui/core/Slide';
 export default function ExperienceSection() {
     return (
         <ContainerStyled>
+            <h1>Experience</h1>
             <CardContainer>
-                <Slide direction="left" in={true} mountOnEnter unmountOnExit>
+                <Slide direction="left" in mountOnEnter>
                     <Card>
                         <CardImage>
                             <CompanyLogo src={shippit} />

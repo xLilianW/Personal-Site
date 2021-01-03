@@ -26,6 +26,7 @@ export default function ProjectsSection() {
                                     <GamepadIcon fontSize="inherit"/>
                                 </IconWrapper>
                                 <h2>Simon</h2>
+                                <Caption>Memory Game</Caption>
                             </CardBase>
                             <CardOverlay></CardOverlay>
                             <CardContent>
@@ -46,7 +47,8 @@ export default function ProjectsSection() {
                                 <IconWrapper>
                                     <LiveHelpIcon fontSize="inherit" />
                                 </IconWrapper>
-                                <h2>Trivia Webapp</h2>
+                                <h2>KnowIt</h2>
+                                <Caption>Trivia Webapp</Caption>
                             </CardBase>
                             <CardOverlay></CardOverlay>
                             <CardContent>
@@ -68,6 +70,7 @@ export default function ProjectsSection() {
                                     <RateReviewIcon fontSize="inherit" />
                                 </IconWrapper>
                                 <h2>YelpCamp</h2>
+                                <Caption>Review Site</Caption>
                             </CardBase>
                             <CardOverlay></CardOverlay>
                             <CardContent>
@@ -104,7 +107,6 @@ const CardContainer = styled.div`
 const CardContent = styled.div`
     color: white;
     position: absolute;
-    position: absolute;
     top: 10%;
     left: 10%;
     bottom: 10%;
@@ -116,12 +118,6 @@ const CardContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-`;
-
-const CardImage = styled.img`
-    display: block;
-    width: 100%;
-    height: 100%;
 `;
 
 const CardOverlay = styled.div`
@@ -210,4 +206,8 @@ const CardBase = styled.div`
 
 const IconWrapper = styled.div`
     font-size: 5em;
+`;
+
+const Caption = styled.p`
+    margin-bottom: 0;
 `;
