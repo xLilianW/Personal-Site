@@ -5,6 +5,7 @@ import VizSensor from 'react-visibility-sensor';
 import GamepadIcon from '@material-ui/icons/Gamepad';
 import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import RateReviewIcon from '@material-ui/icons/RateReview';
+import { darken } from 'polished';
 
 export default function ProjectsSection() {
     const [visible, setVisible] = useState(false);
@@ -31,11 +32,11 @@ export default function ProjectsSection() {
                             <CardOverlay></CardOverlay>
                             <CardContent>
                                 <div>
-                                    <h2>Basic Blog</h2>
-                                    <p>Maecenas viverra velit libero, vitae fringilla elit ultricies eget. Aliquam laoreet nibh id luctus faucibus. Aliquam eu mi sed erat pharetra ullamcorper.</p>
+                                    <h2>Simon</h2>
+                                    <p>A javascript version of the classic memory game</p>
                                 </div>
                                 <ButtonContainer>
-                                    <Button primary>View</Button>
+                                    <Button primary color="#344fc7">View</Button>
                                     <Button>Code</Button>
                                 </ButtonContainer>
                             </CardContent>
@@ -47,17 +48,17 @@ export default function ProjectsSection() {
                                 <IconWrapper>
                                     <LiveHelpIcon fontSize="inherit" />
                                 </IconWrapper>
-                                <h2>KnowIt</h2>
+                                <h2>KnowIt?</h2>
                                 <Caption>Trivia Webapp</Caption>
                             </CardBase>
                             <CardOverlay></CardOverlay>
                             <CardContent>
                                 <div>
-                                    <h2>Basic Blog</h2>
-                                    <p>Maecenas viverra velit libero, vitae fringilla elit ultricies eget. Aliquam laoreet nibh id luctus faucibus. Aliquam eu mi sed erat pharetra ullamcorper.</p>
+                                    <h2>KnowIt?</h2>
+                                    <p>A React trivia webapp that uses the Open Trivia DB API</p>
                                 </div>
                                 <ButtonContainer>
-                                    <Button primary>View</Button>
+                                    <Button primary color="#c9482e">View</Button>
                                     <Button>Code</Button>
                                 </ButtonContainer>
                             </CardContent>
@@ -75,11 +76,11 @@ export default function ProjectsSection() {
                             <CardOverlay></CardOverlay>
                             <CardContent>
                                 <div>
-                                    <h2>Basic Blog</h2>
-                                    <p>Maecenas viverra velit libero, vitae fringilla elit ultricies eget. Aliquam laoreet nibh id luctus faucibus. Aliquam eu mi sed erat pharetra ullamcorper.</p>
+                                    <h2>YelpCamp</h2>
+                                    <p>A MERN stack webapp that allows users to review campgrounds</p>
                                 </div>
                                 <ButtonContainer>
-                                    <Button primary>View</Button>
+                                    <Button primary color="#248225">View</Button>
                                     <Button>Code</Button>
                                 </ButtonContainer>
                             </CardContent>
@@ -171,11 +172,11 @@ const Button = styled.button`
     }
     
     ${props => props.primary && css`
-        background-color: #1f67db;
+        background-color: ${props => props.color};
         color: white;
 
         &:hover {
-            background-color: #1f50a1;
+            background-color: ${props => darken(0.1, props.color)};
         }
     `}
 `;

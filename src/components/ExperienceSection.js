@@ -19,9 +19,12 @@ export default function ExperienceSection() {
                             <CompanyLogo src={shippit} />
                         </CardImage>
                         <CardContent left>
-                            <h2>Shippit</h2>
+                            <h2>Shippit - Junior Software Engineer</h2>
+                            <h4>July 2019 - Dec 2020</h4>
+                            <p><i>Ruby on Rails</i> | <i>ReactJS</i> | <i>NodeJS</i></p>
                             <p>
-                                Sed sed vehicula mauris, nec rhoncus ante. Nam nec aliquam erat. Sed id tellus maximus, interdum eros et, venenatis sapien. Fusce non maximus arcu, vitae blandit tortor. Phasellus quis diam sit amet arcu aliquam suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id hendrerit orci, nec aliquet magna.
+                                I developed and maintained both a monolith and micro-frontends in an agile and rapidly evolving startup environment.
+                                Along the way I improved my knowledge of testing, writing documentation, infrastructure and technical support.
                             </p>
                         </CardContent>
                     </Card>
@@ -29,9 +32,11 @@ export default function ExperienceSection() {
                 <Slide direction="right" in={true} mountOnEnter unmountOnExit>
                     <Card>
                         <CardContent right>
-                            <h2>Women in Engineering Society</h2>
+                            <h2>Women in Engineering Society - IT Co-ordinator</h2>
+                            <h4>Jan 2020 - Dec 2020</h4>
+                            <p><i>ReactJS</i> | <i>Webflow</i> | <i>Zapier</i></p>
                             <p>
-                                Sed sed vehicula mauris, nec rhoncus ante. Nam nec aliquam erat. Sed id tellus maximus, interdum eros et, venenatis sapien. Fusce non maximus arcu, vitae blandit tortor. Phasellus quis diam sit amet arcu aliquam suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id hendrerit orci, nec aliquet magna.
+                                I worked on a variety of projects that benefited both internal and external students, including a jobs board, degree planner and Slack automations. This was achieved through active participation in weekly meetings, self-learning and effective colaboration in a student-lead team.
                             </p>
                         </CardContent>
                         <CardImage>
