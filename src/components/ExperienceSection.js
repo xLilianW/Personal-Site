@@ -7,6 +7,7 @@ import csesoc from '../images/csesoc.png';
 import realSkills from '../images/real_skills.png';
 import va from '../images/va.png';
 import Slide from '@material-ui/core/Slide';
+import { device } from './breakpoints'
 
 export default function ExperienceSection() {
     return (
@@ -61,53 +62,91 @@ export default function ExperienceSection() {
 }
 
 const ContainerStyled = styled.div`
-    padding: 3em;
+    padding: 3em 1em;
+
+    @media ${device.laptop} {
+        padding: 3;
+    }
 `;
 
 const CardContainer = styled.div`
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media ${device.laptop} {
+        width: 80%;
+    }
+
+    @media ${device.desktop} {
+        width: 60%;
+    }
 `;
 
 const Card = styled.div`
-    margin: 1em;
-    padding: 2em;
+    margin: 1em 0.5em;
+    padding: 1em;
     border-radius: 4px;
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    flex-direction: column;
+    text-align: center;
   
-    ${props => props.more && css`
-        flex-direction: column;
-    `}
+    @media ${device.laptop} {
+        flex-direction: row;
+        text-align: left;
+        margin: 1em;
+        padding: 2em;
+        
+        ${props => props.more && css`
+            flex-direction: column;
+        `}
+    }
 `;
 
 const LogoContainer = styled.div`
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+        
+    @media ${device.laptop} {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
 `;
 
 const CardContent = styled.div`
-    ${props => props.right && css`
-        text-align: right;
-        padding-right: 3em;
-    `}
+    @media ${device.laptop} {
+        ${props => props.right && css`
+            text-align: right;
+            padding-right: 3em;
+        `}
 
-    ${props => props.left && css`
-        padding-left: 3em;
-    `}
+        ${props => props.left && css`
+            padding-left: 3em;
+        `}
+    }
 `;
 
 const CardImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    order: -1;
+
+    @media ${device.laptop} {
+        order: 0;
+    }
 `;
 
 const CompanyLogo = styled.img`
-    max-height: 120px;
-    max-width: 200px;
+    max-height: 10em;
+    max-width: 13em;
+    margin-bottom: 1.5em;
+
+    @media ${device.laptop} {
+        margin: 0;
+    }
 `;

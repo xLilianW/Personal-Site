@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import unsw from '../images/unsw.png';
 import fortStreet from '../images/fort_street.png';
 import Slide from '@material-ui/core/Slide';
+import { device } from './breakpoints'
 
 export default function EducationSection() {
     return (
@@ -41,19 +42,32 @@ export default function EducationSection() {
 }
 
 const ContainerStyled = styled.div`
-    padding: 3em;
+    padding: 3em 1em;
+
+    @media ${device.laptop} {
+        padding: 3;
+    }
 `;
 
 const CardContainer = styled.div`
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media ${device.laptop} {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    @media ${device.desktop} {
+        width: 60%;
+    }
 `;
 
 const Card = styled.div`
-    margin: 1em;
-    padding: 2em;
+    margin: 1em 0.5em;
+    padding: 1em;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -61,6 +75,11 @@ const Card = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: center;
     flex-basis: 50%;
+
+    @media ${device.laptop} {
+        margin: 1em;
+        padding: 2em;
+    }
 `;
 
 const CardContent = styled.div`
@@ -75,5 +94,5 @@ const CardImage = styled.div`
 `;
 
 const CompanyLogo = styled.img`
-    max-height: 80px;
+    max-height: 5em;
 `;

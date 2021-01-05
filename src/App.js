@@ -16,8 +16,8 @@ function App() {
     <MainStyled>
       <Header />
       <AboutSection />
-      <ExperienceSection />
       <SkillsSection />
+      <ExperienceSection />
       <EducationSection />
       <ProjectsSection />
       <ContactSection />

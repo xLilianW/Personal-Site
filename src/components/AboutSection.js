@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from './breakpoints'
 
 export default function AboutSection() {
     return (
@@ -20,8 +21,16 @@ export default function AboutSection() {
 }
 
 const ContainerStyled = styled.div`
-    padding: 3em;
+    padding: 3em 0;
     text-align: center;
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
+    
+    @media ${device.tablet} {
+        width: 60%;
+    }
+
+    @media ${device.desktop} {
+        width: 50%;
+    }
 `;

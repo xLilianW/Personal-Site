@@ -6,6 +6,7 @@ import GamepadIcon from '@material-ui/icons/Gamepad';
 import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import { darken } from 'polished';
+import { device } from './breakpoints'
 
 export default function ProjectsSection() {
     const [visible, setVisible] = useState(false);
@@ -93,16 +94,30 @@ export default function ProjectsSection() {
 }
 
 const ContainerStyled = styled.div`
-    padding: 3em;
+    padding: 3em 1em;
     text-align: center;
+
+    @media ${device.laptop} {
+        padding: 3;
+    }
 `;
 
 const CardContainer = styled.div`
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    @media ${device.laptop} {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    @media ${device.desktop} {
+        width: 60%;
+    }
 `;
 
 const CardContent = styled.div`
@@ -139,9 +154,9 @@ const Card = styled.div`
     background-repeat: no-repeat;
     position: relative;
     cursor: pointer;
-    flex-basis: 31%;
+    flex-grow: 1;
     height: 250px;
-    margin: 1.5em 0;
+    margin: 1.5em;
 
     &:hover ${CardContent} {
         opacity: 1;

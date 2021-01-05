@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Fade from '@material-ui/core/Fade';
 import VizSensor from 'react-visibility-sensor';
+import { device } from './breakpoints'
 
 export default function SkillsSection() {
     const [frontendIn, setFrontendIn] = useState(false);
@@ -65,22 +66,36 @@ export default function SkillsSection() {
 const ContainerStyled = styled.div`
     background-color: #691fb8;
     color: white;
-    padding: 3em;
+    padding: 3em 1em;
+
+    @media ${device.laptop} {
+        padding: 3;
+    }
 `;
 
 const CardContainer = styled.div`
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     margin-bottom: 2em;
+    flex-direction: column;
+
+    @media ${device.laptop} {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    @media ${device.desktop} {
+        width: 60%;
+    }
 `;
 
 const Card = styled.div`
     border: 1px white solid;
     text-align: center;
     flex-grow: 1;
-    margin: 1em;
-    padding: 2em;
+    margin: 1em 0.5em;
+    padding: 1em;
     border-radius: 4px;
 
     ul {
@@ -97,5 +112,10 @@ const Card = styled.div`
     ul li:before {
         content: '✓ ';
         font-weight: bold;
+    }
+
+    @media ${device.laptop} {
+        margin: 1em;
+        padding: 2em;
     }
 `;

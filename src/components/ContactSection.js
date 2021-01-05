@@ -18,10 +18,6 @@ const ContainerStyled = styled.div`
     color: white;
     padding: 3em;
     text-align: center;
-
-    a {
-        color: white;
-    }
 `;
 
 const SocialIcon = styled.img`
