@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import Fade from '@material-ui/core/Fade';
 import VizSensor from 'react-visibility-sensor';
 import { device } from './breakpoints'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export default function SkillsSection() {
+    const matches = useMediaQuery('(max-width:1024px)');
     const [frontendIn, setFrontendIn] = useState(false);
     const [backendIn, setBackendIn] = useState(false);
     const [otherIn, setOtherIn] = useState(false);
@@ -22,9 +24,10 @@ export default function SkillsSection() {
                 onChange={(isVisible) => {
                     if (isVisible) { fadeCardsIn() } 
                 }}
+                active={!matches}
             >
                 <CardContainer>
-                    <Fade timeout={500} in={frontendIn}>
+                    <Fade timeout={500} in={matches || frontendIn}>
                         <Card>
                             <h2>Frontend</h2>
                             <ul>
@@ -35,7 +38,7 @@ export default function SkillsSection() {
                             </ul>
                         </Card>
                     </Fade>
-                    <Fade timeout={500} in={backendIn}>
+                    <Fade timeout={500} in={matches || backendIn}>
                         <Card>
                             <h2>Backend</h2>
                             <ul>
@@ -47,7 +50,7 @@ export default function SkillsSection() {
                             </ul>
                         </Card>
                     </Fade>
-                    <Fade timeout={500} in={otherIn}>
+                    <Fade timeout={500} in={matches || otherIn}>
                         <Card>
                             <h2>Other</h2>
                             <ul>

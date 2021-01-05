@@ -7,8 +7,10 @@ import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import { darken } from 'polished';
 import { device } from './breakpoints'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export default function ProjectsSection() {
+    const matches = useMediaQuery('(max-width:1024px)');
     const [visible, setVisible] = useState(false);
 
     return (
@@ -19,9 +21,10 @@ export default function ProjectsSection() {
                 onChange={(isVisible) => {
                     if (isVisible) { setVisible(true) } 
                 }}
+                active={!matches}
             >
                 <CardContainer>
-                    <Zoom in={visible} timeout={500}>
+                    <Zoom in={matches || visible} timeout={500}>
                         <Card>
                             <CardBase color="#344fc7">
                                 <IconWrapper>
@@ -43,7 +46,7 @@ export default function ProjectsSection() {
                             </CardContent>
                         </Card>
                     </Zoom>
-                    <Zoom in={visible} timeout={500}>
+                    <Zoom in={matches || visible} timeout={500}>
                         <Card>
                             <CardBase color="#c9482e">
                                 <IconWrapper>
@@ -65,7 +68,7 @@ export default function ProjectsSection() {
                             </CardContent>
                         </Card>
                     </Zoom>
-                    <Zoom in={visible} timeout={500}>
+                    <Zoom in={matches || visible} timeout={500}>
                         <Card>
                             <CardBase color="#248225">
                                 <IconWrapper>
